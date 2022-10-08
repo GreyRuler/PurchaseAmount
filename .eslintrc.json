@@ -1,0 +1,37 @@
+{
+    "root": true,
+    "extends": [
+        "airbnb-base"
+    ],
+    "env": {
+        "es6": true,
+        "browser": true,
+        "jest": true
+    },
+    "rules": {
+        "no-plusplus": 0,
+        "no-underscore-dangle": 0,
+        "no-param-reassign": 0,
+        "no-restricted-syntax": [
+            "error",
+            "LabeledStatement",
+            "WithStatement"
+        ]
+    },
+    "parser": "@babel/eslint-parser",
+    "overrides": [
+        {
+            "files": [
+                "**/*.{ts,tsx}"
+            ],
+            "parser": "@typescript-eslint/parser",
+            "parserOptions": {
+                "project": "./tsconfig.json"
+            },
+            "extends": [
+                "airbnb-typescript/base"
+            ],
+            "rules": {}
+        }
+    ]
+}
